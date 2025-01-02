@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Koulen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contact" role="main">
+      <nav class="div" role="navigation">
+        <a href="home.html"><img
+          src="https://cdn.builder.io/api/v1/image/assets/ba947bc54c02461b9a27cdfe9de2e1a4/101a65a9dbac4366579ffbc633691572f33da0026fe28eb88b5e6f56d6cd7b08?apiKey=ba947bc54c02461b9a27cdfe9de2e1a4&"
+          class="logo"
+          alt="Portfolio logo"
+          width="45"
+          height="48"
+        /></a>
+        <div class="div-2">
+          <a href="home.html" class="graphic-design">Graphic Design</a>
+          <a href="illust.html" class="illustration">Illustration</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.linkedin.com/in/hannah-chung-598108213/" target=”_blank><img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/ba947bc54c02461b9a27cdfe9de2e1a4/07ae70ed114b03e7d8bb512de5d8d838a2b71958fe2bd3467df0005b4bce8ca3?apiKey=ba947bc54c02461b9a27cdfe9de2e1a4&"
+            class="img"
+            alt="Additional navigation icon"
+          /></a>
+        </div>
+      </nav>
+      <section class="div-3">
+        <h1 class="contact-me">Contact me</h1>
+        <p class="feel-free-to-contact-me-at-any-of-the-methods-below">
+          Feel free to contact me at any of the methods below!
+        </p>
+      </section>
+      <section class="hannahyachung-gmail-com-682-272-3843">
+        <a href="mailto:hannahyachung@gmail.com" aria-label="Email address"
+          >hannahyachung@gmail.com</a
+        >
+        <br /><br />
+        <a href="tel:+16822723843" aria-label="Phone number">682.272.3843</a>
+        <br />
+      </section>
+      <footer class="div-4" role="contentinfo">
+        <div class="div-5">
+          <a
+            href="tel:+16822723843"
+            class="phone-number"
+            aria-label="Phone number"
+            >682.272.3843</a
+          >
+          <span class="hannah-chung">Hannah Chung</span>
+          <a
+            href="mailto:hannahyachung@gmail.com"
+            class="email"
+            aria-label="Email address"
+            >hannahyachung@gmail.com</a
+          >
+        </div>
+      </footer>
+    </div>
+    <style>
+      .contact {
+        background-color: #ffffff;
+        display: flex;
+        padding-top: 40px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        font-weight: 400;
+        min-height: 100vh;
+      }
+
+      .div {
+        display: flex;
+        width: 100%;
+        max-width: 1300px;
+        gap: 20px;
+        color: #565656;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font: 30px Koulen, sans-serif;
+      }
+
+      .div a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .div a:hover,
+      .div a:focus {
+        color: #6b8c96;
+        outline: none;
+      }
+
+      .img {
+        aspect-ratio: 0.94;
+        object-fit: contain;
+        object-position: center;
+        width: 45px;
+        margin: auto 0;
+      }
+
+      .div-2 {
+        display: flex;
+        gap: 40px 58px;
+        flex-wrap: wrap;
+      }
+
+      .graphic-design {
+        flex-grow: 1;
+      }
+
+      .illustration {
+        flex-basis: auto;
+      }
+
+      .div-3 {
+        display: flex;
+        margin-top: 69px;
+        width: 100%;
+        max-width: 1135px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: start;
+      }
+
+      .contact-me {
+        color: #6b8c96;
+        font: 95px Koulen, sans-serif;
+        margin: 0;
+      }
+
+      .feel-free-to-contact-me-at-any-of-the-methods-below {
+        color: #565656;
+        font: 24px/41px Inter, sans-serif;
+        margin: 20px 0;
+      }
+
+      .hannahyachung-gmail-com-682-272-3843 {
+        align-self: stretch;
+        margin-top: 158px;
+        gap: 10px;
+        color: #565656;
+        white-space: nowrap;
+        text-align: center;
+        font: 64px/72px Koulen, sans-serif;
+      }
+
+      .hannahyachung-gmail-com-682-272-3843 a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .hannahyachung-gmail-com-682-272-3843 a:hover,
+      .hannahyachung-gmail-com-682-272-3843 a:focus {
+        color: #6b8c96;
+        outline: none;
+      }
+
+      .div-4 {
+        background-color: rgba(107, 140, 150, 0.36);
+        align-self: stretch;
+        display: flex;
+        margin-top: 240px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        color: #565656;
+        text-align: center;
+        justify-content: center;
+        padding: 50px 70px;
+        font: 20px Inter, sans-serif;
+      }
+
+      .div-5 {
+        display: flex;
+        margin-left: 69px;
+        width: 839px;
+        max-width: 100%;
+        gap: 40px 100px;
+        flex-wrap: wrap;
+      }
+
+      .div-5 a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .div-5 a:hover,
+      .div-5 a:focus {
+        color: #6b8c96;
+        outline: none;
+      }
+
+      .phone-number {
+        flex-grow: 1;
+        width: 105px;
+      }
+
+      .hannah-chung {
+        flex-grow: 1;
+        width: 111px;
+      }
+
+      .email {
+        flex-grow: 1;
+        width: 238px;
+      }
+
+      @media (max-width: 991px) {
+        .div,
+        .div-2,
+        .div-3,
+        .div-4 {
+          max-width: 100%;
+        }
+
+        .div-3 {
+          margin-top: 40px;
+        }
+
+        .contact-me {
+          font-size: 40px;
+        }
+
+        .hannahyachung-gmail-com-682-272-3843 {
+          max-width: 100%;
+          font-size: 40px;
+          line-height: 50px;
+          margin-top: 40px;
+          white-space: initial;
+        }
+
+        .div-4 {
+          margin-top: 40px;
+          padding: 0 20px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .div-2 {
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hannahyachung-gmail-com-682-272-3843 {
+          width: auto;
+          height: auto;
+          align-self: center;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .div a,
+        .hannahyachung-gmail-com-682-272-3843 a,
+        .div-5 a {
+          transition: none;
+        }
+      }
+    </style>
+  </body>
+</html>
