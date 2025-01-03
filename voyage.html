@@ -38,13 +38,6 @@
             transform: translateX(-50%);
         }
 
-        .voyage-page {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            min-height: 100vh;
-        }
-
         .div {
             display: flex;
             width: 100%;
@@ -116,20 +109,7 @@
             margin-left: 1rem;
         }
 
-        .hero {
-            position: relative;
-            min-height: 541px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            margin: 5rem auto;
-            border-radius: 15px;
-            overflow: hidden;
-            max-width: 1300px;
-            width: calc(100% - 6rem);
-        }
+
 
         .hero-image {
             position: absolute;
@@ -273,13 +253,6 @@
 
         .material-item.third-width {
             grid-column: span 4;
-        }
-
-        .footer {
-            background-color: rgba(107, 140, 150, 0.36);
-            padding: 3rem;
-            margin-top: auto;
-            text-align: center;
         }
 
         .contact-grid {
@@ -454,14 +427,14 @@
             </section>
         </div>
 
-        <footer id="contact" class="footer" role="contentinfo">
-            <div class="contact-grid">
-                <div class="contact-item">682.272.3843</div>
-                <div class="contact-item">Hannah Chung</div>
-                <div class="contact-item">hannahyachung@gmail.com</div>
+        <footer class="footer" id="contact">
+            <div class="contact-info">
+                <a href="tel:+16822723843" class="contact-item" aria-label="Phone number">682.272.3843</a>
+                <span class="contact-item">Hannah Chung</span>
+                <a href="mailto:hannahyachung@gmail.com" class="contact-item contact-email"
+                    aria-label="Email address">hannahyachung@gmail.com</a>
             </div>
         </footer>
-    </div>
     </div>
 </body>
 

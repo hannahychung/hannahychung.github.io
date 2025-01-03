@@ -6,6 +6,21 @@
     --footer-background: rgba(107, 140, 150, 0.36);
     --primary-red: #DE3A1F;
     --primary-orange: #F16C30;
+    --primary-red: #B83224;
+    --primary-orange: #D86828;
+    --primary-teal: #107562;
+    --primary-dark: #302F2F;
+    --primary-brown: #925019;
+    --primary-yellow: #D3A12C;
+    --primary-cream: #F1EDE4;
+    --primary-blue: #038795;
+    --text-gray: #565656;
+    --spacing-base: 8px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+    --max-width: 1440px;
+    --container-padding: 48px;
     --light-orange: #F7AB6D;
     --cream: #F1DEAE;
     --dark-gray: #303134;
@@ -86,6 +101,21 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0 53px;
+}
+
+.hero {
+    position: relative;
+    min-height: 541px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    margin: 5rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 1300px;
+    width: calc(100% - 6rem);
 }
 
 .hero-section {
@@ -176,12 +206,19 @@ body {
     outline: none;
 }
 
+
 .footer {
     background-color: var(--footer-background);
+    display: flex;
+    margin-top: 145px;
     width: 100%;
-    margin-top: 217px;
-    padding: 50px 20px;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-text);
     text-align: center;
+    justify-content: center;
+    padding: 50px 70px;
+    font: 400 20px "Inter", sans-serif;
 }
 
 .contact-info {
