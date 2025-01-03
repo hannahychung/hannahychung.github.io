@@ -143,6 +143,21 @@ h1 {
   font: 30px "Inter", sans-serif;
 }
 
+.section {
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 3rem;
+  color: var(--text-gray);
+}
+
+
 .project-card {
   position: relative;
   border-radius: 15px;
@@ -239,6 +254,8 @@ h1 {
 .contact-item {
   flex: 1;
   min-width: 105px;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .contact-email {
