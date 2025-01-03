@@ -103,6 +103,11 @@ body {
     padding: 0 53px;
 }
 
+h1 {
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+}
+
 .hero {
     position: relative;
     min-height: 541px;
