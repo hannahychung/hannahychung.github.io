@@ -80,6 +80,14 @@ body {
     outline: none;
 }
 
+.main-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 53px;
+}
+
 .hero-section {
     display: flex;
     margin: 103px auto 0;
@@ -231,6 +239,15 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .material-item,
+    .logo-item {
+        transition: none;
+    }
+
     .nav-link {
         transition: none;
     }

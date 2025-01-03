@@ -148,10 +148,10 @@
         }
 
         .hero-title {
-            font-family: 'Koulen', sans-serif;
             font-size: clamp(60px, 10vw, 140px);
             margin: 0;
             line-height: 1.1;
+            color: white
         }
 
         .hero-subtitle {
@@ -175,9 +175,12 @@
         .section-text {
             font-size: 1rem;
             line-height: 1.5;
-            max-width: 65ch;
             margin-bottom: 2rem;
             color: var(--text-gray);
+        }
+
+        .section-text-half {
+            max-width: 65ch;
         }
 
         .branding-grid {
@@ -333,32 +336,6 @@
                 grid-column: span 12;
             }
         }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            .material-item,
-            .logo-item {
-                transition: none;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-gray: #B8B8B8;
-            }
-
-            body {
-                background-color: #121212;
-            }
-
-            .skip-link {
-                background-color: #1E1E1E;
-                color: #fff;
-            }
-        }
     </style>
 </head>
 
@@ -379,7 +356,7 @@
             </div>
         </nav>
 
-        <main id="main" role="main">
+        <div class="main-content" role="main">
             <section class="hero" aria-labelledby="hero-title">
                 <img src="https://cdn.builder.io/api/v1/image/assets%2Fba947bc54c02461b9a27cdfe9de2e1a4%2F2157a0e2218c8276308170b30eb9559c6c054159d4e894bfac5df1e08b4c2229"
                     alt="" class="hero-image" aria-hidden="true">
@@ -426,7 +403,7 @@
                                 <span class="bebas">Bebas Neue</span>
                                 <span class="libre">Libre Franklin</span>
                             </div>
-                            <p class="section-text">
+                            <p class="section-text-half">
                                 The goal of Voyage was to appeal to the audience of sophomore college students and
                                 to encapsulate the messages of growth and self-discovery. With this in mind, the
                                 color palette, font, and logos were designed with a fresh, youthful, and modern
@@ -475,7 +452,7 @@
                         width="1057" height="496">
                 </div>
             </section>
-        </main>
+        </div>
 
         <footer id="contact" class="footer" role="contentinfo">
             <div class="contact-grid">
