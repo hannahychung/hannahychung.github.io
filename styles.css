@@ -108,6 +108,10 @@ h1 {
   font-weight: 400;
 }
 
+p {
+  padding-top: 1rem;
+}
+
 .hero {
   position: relative;
   min-height: 541px;
