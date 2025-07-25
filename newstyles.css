@@ -6,13 +6,15 @@
 
 body {
     background-color: var(--background);
+    transition: background-color 0.5s ease;
+
 }
 
 .nav-wrapper {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 20px 40px;
+    padding: 30px 40px;
     box-sizing: border-box;
 }
 
@@ -30,6 +32,12 @@ button {
 
 button svg path {
     transition: stroke 0.2s ease;
+    stroke: var(--text);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 1s ease;
+
 }
 
 button:hover svg path {
@@ -54,6 +62,7 @@ button:hover svg path {
     line-height: normal;
     margin-bottom: 10px;
     margin-top: 150px;
+    transition: color 0.5s ease;
 }
 
 .subtitle {
@@ -66,4 +75,80 @@ button:hover svg path {
     text-align: center;
     margin-top: 10px;
     line-height: 40px;
+    transition: color 0.5s ease;
+
+}
+
+/* inverted theme overrides */
+body.inverted {
+    --background: #7A8D25;
+    --text: #FFFEFA;
+    --accent: #383838;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--accent);
+    color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000;
+
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 100px;
+    margin: 0;
+    text-align: left;
+}
+
+.nav ul li {
+    margin: 20px 0;
+}
+
+.nav ul li a {
+    color: var(--background);
+    font-size: 4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.nav ul li a:hover {
+    color: var(--text);
+}
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 4rem;
+    background: transparent;
+    border: none;
+    color: var(--background);
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+}
+
+.close-menu:hover {
+    color: var(--text);
 }
