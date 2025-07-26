@@ -4,9 +4,11 @@ const body = document.body;
 
 //functionality to change the visual theme
 
-themeButton.addEventListener('click', () => {
-    body.classList.toggle('inverted');
-});
+if (themeButton) {
+    themeButton.addEventListener('click', () => {
+        body.classList.toggle('inverted');
+    });
+}
 
 
 //to toggle the menu 
