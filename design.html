@@ -19,7 +19,7 @@
     <div class="nav-wrapper">
         <div class="nav-left">
             <button id="home">
-                <a href="newindex.html" id="home">
+                <a href="index.html" id="home">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                         <path
                             d="M18 44V24H30V44M6 18L24 4L42 18V40C42 41.0609 41.5786 42.0783 40.8284 42.8284C40.0783 43.5786 39.0609 44 38 44H10C8.93913 44 7.92172 43.5786 7.17157 42.8284C6.42143 42.0783 6 41.0609 6 40V18Z"
@@ -41,20 +41,88 @@
 
     <div class="heading">
         <h1 class="page-heading">design work</h1>
-
     </div>
+
+    <div class="column-content">
+        <div class="column-one">
+            <div class="design-project" data-id="Anewgo">
+                <h3>Anewgo</h3>
+            </div>
+            <div class="design-project" data-id="CVC">
+                <h3>Center for Vocation and Career</h3>
+            </div>
+            <div class="design-project" data-id="Voyage">
+                <h3>Voyage Event Series</h3>
+            </div>
+        </div>
+
+        <div class="column-two">
+            <div class="design-img-wrapper">
+                <img class="design-img" data-id="Anewgo" src="images/anewgomockup.png" />
+            </div>
+            <div class="design-img-wrapper">
+                <img class="design-img" data-id="CVC" src="images/cvcmockup.png" />
+            </div>
+            <div class="design-img-wrapper">
+                <img class="design-img" data-id="Voyage" src="images/voyagemockup.png" />
+            </div>
+        </div>
+    </div>
+
 
     <div id="menu" class="menu">
         <button id="close-menu" class="close-menu">&times;</button>
         <nav class="nav">
             <ul>
-                <li><a href="illustration.html">illustration</a></li>
                 <li><a href="design.html">design</a></li>
-                <li><a href="#">websites</a></li>
-                <li><a href="#">about</a></li>
+                <li><a href="websites.html">websites</a></li>
+                <li><a href="illustration.html">illustration</a></li>
+                <li><a href="about.html">about</a></li>
             </ul>
         </nav>
     </div>
 
+
     <script src="index-script.js"></script>
+
+    <script>
+        const observerOptions = {
+            root: document.querySelector('.column-two'),
+            threshold: 0.5,
+        };
+
+        const projectLabels = document.querySelectorAll('.design-project');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('data-id');
+                    projectLabels.forEach(label => {
+                        if (label.getAttribute('data-id') === id) {
+                            label.classList.add('active');
+                        } else {
+                            label.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.design-img').forEach(img => {
+            observer.observe(img);
+        });
+
+        projectLabels.forEach(label => {
+            label.addEventListener('click', () => {
+                const id = label.getAttribute('data-id');
+                const targetImg = document.querySelector(`.design-img[data-id="${id}"]`);
+                if (targetImg) {
+                    targetImg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+    </script>
+
+
 </body>
