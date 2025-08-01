@@ -1,0 +1,32 @@
+/* make sure images don't distort */
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* full width image */
+.img-full {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1rem;
+}
+
+/* side-by-side images */
+.marketing-gallery,
+.materials-gallery,
+.presentation-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.img-half {
+    flex: 1 1 calc(50% - 0.5rem);
+    /* two per row with spacing */
+    aspect-ratio: 4 / 3;
+    /* or 1 / 1 or whatever crop you like */
+    max-width: calc(50% - 0.5rem);
+}

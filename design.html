@@ -46,13 +46,13 @@
     <div class="column-content">
         <div class="column-one">
             <div class="design-project" data-id="Anewgo">
-                <h3>Anewgo</h3>
+                <h3><a href="anewgo.html">Anewgo</a></h3>
             </div>
             <div class="design-project" data-id="CVC">
-                <h3>Center for Vocation and Career</h3>
+                <h3><a href="cvc.html">Center for Vocation and Career</a></h3>
             </div>
             <div class="design-project" data-id="Voyage">
-                <h3>Voyage Event Series</h3>
+                <h3><a href="voyage.html"></a>Voyage Event Series</a></h3>
             </div>
         </div>
 
@@ -83,46 +83,31 @@
     </div>
 
 
-    <script src="newindex-script.js"></script>
+    <script src="index-script.js"></script>
 
     <script>
-        const observerOptions = {
-            root: document.querySelector('.column-two'),
-            threshold: 0.5,
-        };
-
         const projectLabels = document.querySelectorAll('.design-project');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('data-id');
-                    projectLabels.forEach(label => {
-                        if (label.getAttribute('data-id') === id) {
-                            label.classList.add('active');
-                        } else {
-                            label.classList.remove('active');
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.design-img').forEach(img => {
-            observer.observe(img);
-        });
+        const imageWrappers = document.querySelectorAll('.design-img-wrapper');
 
         projectLabels.forEach(label => {
-            label.addEventListener('click', () => {
+            label.addEventListener('mouseenter', () => {
                 const id = label.getAttribute('data-id');
-                const targetImg = document.querySelector(`.design-img[data-id="${id}"]`);
-                if (targetImg) {
-                    targetImg.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+
+                imageWrappers.forEach(wrapper => {
+                    const wrapperId = wrapper.querySelector('.design-img').getAttribute('data-id');
+                    wrapper.classList.toggle('active', wrapperId === id);
+                });
             });
         });
 
+        // optional: set default image
+        const defaultId = projectLabels[0].getAttribute('data-id');
+        const defaultWrapper = document.querySelector(`.design-img-wrapper .design-img[data-id="${defaultId}"]`)?.parentElement;
+        if (defaultWrapper) {
+            defaultWrapper.classList.add('active');
+        }
     </script>
+
 
 
 </body>
