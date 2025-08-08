@@ -14,6 +14,7 @@ body {
     transition: background-color 0.5s ease;
     overflow-x: hidden;
     margin: 35px;
+    cursor: none;
 }
 
 .nav-wrapper {
@@ -66,14 +67,26 @@ button:hover svg path {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
+
     gap: 0px;
-    margin-top: -100px;
+    margin-top: -80px;
 
 }
 
 .my-svg-illustration {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.my-svg-illustration:nth-child(2) {
+    margin-left: -80px;
+}
+
+.svg-wrapper {
+    position: relative;
     display: flex;
     align-items: flex-start;
 }
@@ -211,7 +224,7 @@ body.inverted {
 
 .card-wrapper {
     position: relative;
-    display: inline-block;
+    display: flex;
     margin: 40px auto;
 }
 
@@ -608,4 +621,27 @@ a {
 
 .about-wrapper:hover::before {
     transform: translate(-10px, 10px);
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    /* so it doesn’t block clicks */
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor {
+    background: var(--accent);
+    transition: background 0.3s ease;
+}
+
+.menu-active .custom-cursor {
+    background: var(--background);
 }
