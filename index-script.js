@@ -7,6 +7,7 @@ const body = document.body;
 if (themeButton) {
     themeButton.addEventListener('click', () => {
         body.classList.toggle('inverted');
+        footer.classList.toggle('inverted');
     });
 }
 
