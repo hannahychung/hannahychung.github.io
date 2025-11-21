@@ -94,7 +94,7 @@ button:hover svg path {
 .title {
     color: var(--text);
     text-align: center;
-    font-family: "Gilda Display";
+    font-family: "Barlow";
     font-size: 75px;
     font-style: normal;
     font-weight: 400;
@@ -212,8 +212,8 @@ body.inverted {
 
 .page-heading {
     color: var(--text);
-    text-align: center;
-    font-family: "Gilda Display";
+    text-align: left;
+    font-family: "Barlow";
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -275,7 +275,7 @@ body.inverted {
 
 .card-title {
     color: #000;
-    font-family: "Gilda Display";
+    font-family: "Barlow";
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -547,7 +547,7 @@ a {
 .about-name {
     color: var(--text);
     text-align: left;
-    font-family: "Gilda Display";
+    font-family: "Barlow";
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
