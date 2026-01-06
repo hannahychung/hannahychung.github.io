@@ -1,7 +1,18 @@
-#footer {
-    display: flex;
-    padding: 118px 103px 67px 62px;
+/* full-width footer */
+footer {
+    width: 100%;
     background: #FFFEFA;
+}
+
+/* outer footer container */
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* centers inner content */
+    padding: 118px 103px 67px 62px;
+    box-sizing: border-box;
+    /* includes padding in width */
 }
 
 /* name + columns wrapper */
@@ -9,45 +20,44 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* aligns name and columns at bottom */
+    /* aligns columns and name at bottom */
     width: 100%;
+    max-width: 1440px;
+    /* optional: constrain content for large screens */
 }
 
 /* NAME */
 #footerName {
     color: #383838;
-    font-family: "Barlow";
+    font-family: "Barlow", sans-serif;
     font-size: 75px;
     font-weight: 400;
     margin: 0;
 }
 
-/* COLUMNS WRAPPER */
+/* columns container */
 #footerMenu {
     display: flex;
     gap: 70px;
-    /* spacing between columns */
     align-items: flex-end;
-    /* align column titles with name */
 }
 
-/* EACH COLUMN */
+/* each column */
 .footerCol {
     display: flex;
     flex-direction: column;
 }
 
-/* COLUMN TITLE */
+/* column title */
 .footerTitle {
     font-family: "Chathura", sans-serif;
     font-size: 48px;
     font-weight: 800;
     margin: 0 0 2px 0;
     color: #383838;
-    text-align: left;
 }
 
-/* COLUMN ITEMS */
+/* column items */
 .footerColContent {
     display: flex;
     flex-direction: column;

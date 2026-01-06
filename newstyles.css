@@ -61,6 +61,8 @@ button:hover svg path {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px 40px;
+
 }
 
 .hero-illust {
@@ -102,6 +104,79 @@ button:hover svg path {
     margin-bottom: 10px;
     margin-top: 150px;
     transition: color 0.5s ease;
+}
+
+.hero-sub-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 6rem 2rem;
+}
+
+.home-title {
+    margin-top: 0;
+    color: #7A8D25;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.home-sub {
+    color: #383838;
+    text-align: left;
+    font-family: 'Chathura';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: -24px;
+}
+
+.home-sub-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.work-section {
+    width: 100%;
+    /* space from title */
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.work-item:hover img {
+    transform: scale(1.04);
+}
+
+
+@media (max-width: 900px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 .subtitle {
